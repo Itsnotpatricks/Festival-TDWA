@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   CURSOR
+========================= */
+
+.cursor {
+    position: fixed;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    mix-blend-mode: difference;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+
+    transition:
+        width .3s ease,
+        height .3s ease;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+
+    position: absolute;
+
+    inset: -5%;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 40, 40, .25),
+            rgba(10, 30, 30, .45)
+        ),
+        url("images/monet-home.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.05);
+
+    transition: transform 1s ease;
+
+    animation: breathing 12s ease-in-out infinite alternate;
+}
+
+
+@keyframes breathing {
+
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+
+}
+
+
+/* =========================
+   MOUSE LIGHT
+========================= */
+
+.light {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 226, 130, .28),
+            rgba(255, 226, 130, 0) 70%
+        );
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.top {
+
+    position: absolute;
+
+    top: 35px;
+    left: 40px;
+    right: 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    z-index: 5;
+}
+
+
+.logo {
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 7px;
+}
+
+
+.logo span {
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    letter-spacing: 0;
+}
+
+
+.location {
+
+    text-align: right;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    position: absolute;
+
+    left: 40px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+
+.eyebrow {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    opacity: .9;
+}
+
+
+h1 {
+
+    font-size: clamp(
+        90px,
+        14vw,
+        220px
+    );
+
+    line-height: .75;
+
+    font-weight: 300;
+
+    letter-spacing: -10px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+h1 em {
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    margin-left: 12vw;
+
+    letter-spacing: -8px;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom {
+
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+    bottom: 35px;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: end;
+}
+
+
+.intro {
+
+    max-width: 220px;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   ENTER BUTTON
+========================= */
+
+.enter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 17px 23px;
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    border-radius: 100px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        transform .4s ease;
+}
+
+
+.enter strong {
+
+    font-size: 18px;
+
+    font-weight: 300;
+}
+
+
+.enter:hover {
+
+    background: white;
+
+    color: #111;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   SCROLL
+========================= */
+
+.scroll {
+
+    justify-self: end;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.scroll span {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+.scroll i {
+
+    width: 1px;
+
+    height: 45px;
+
+    background: white;
+
+    display: block;
+
+    animation: scrollLine 2s infinite;
+}
+
+
+@keyframes scrollLine {
+
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+}
+
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-button {
+
+    position: fixed;
+
+    top: 25px;
+    right: 35px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    background: rgba(0,0,0,.05);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+
+    cursor: none;
+}
+
+
+.menu-button span {
+
+    display: block;
+
+    width: 19px;
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: white;
+
+    transition: .4s;
+}
+
+
+/* =========================
+   SLIDE MENU
+========================= */
+
+.menu {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 450px;
+    height: 100vh;
+
+    background: #e7eadf;
+
+    color: #111;
+
+    z-index: 90;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transform: translateX(100%);
+
+    transition:
+        transform .8s
+        cubic-bezier(.77,0,.18,1);
+}
+
+
+.menu.active {
+
+    transform: translateX(0);
+}
+
+
+/* MENU HEADER */
+
+.menu-top,
+.menu-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* MENU LINKS */
+
+.menu-links {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.menu-links a {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,.2);
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    transition:
+        padding-left .4s ease;
+}
+
+
+.menu-links a:hover {
+
+    padding-left: 15px;
+}
+
+
+.menu-links small {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        cursor: auto;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .top {
+        left: 20px;
+        right: 20px;
+        top: 25px;
+    }
+
+    .menu-button {
+        right: 20px;
+    }
+
+    .hero {
+        left: 20px;
+    }
+
+    h1 {
+        font-size: 20vw;
+        letter-spacing: -5px;
+    }
+
+    h1 em {
+        margin-left: 8vw;
+        letter-spacing: -4px;
+    }
+
+    .bottom {
+        left: 20px;
+        right: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .intro,
+    .scroll {
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .menu-links a {
+        font-size: 32px;
+    }
+
+}
+
+/* =====================================================
+   VISIT PAGE ONLY
+   Load AFTER style.css. Every rule is scoped to
+   .visit-page, so no other page is affected.
+===================================================== */
+
+/* The global style.css sets body { overflow: hidden } for the home
+   page. That blocks scrolling here, so re-enable it only when the
+   visit page is present. */
+body:has(.visit-page) {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #14282a;
+}
+
+.visit-page {
+    --bg: #14282a;
+    --text: #e7eadf;
+    --muted: rgba(231, 234, 223, .6);
+    --line: rgba(231, 234, 223, .2);
+    --accent: #ffe282;
+
+    min-height: 100vh;
+    padding: 140px 40px 35px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.visit-page .visit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid var(--line);
+}
+
+.visit-page .page-number {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+/* override the huge global h1 */
+.visit-page h1 {
+    display: block;
+    font-size: clamp(64px, 11vw, 170px);
+    line-height: .85;
+    font-weight: 300;
+    letter-spacing: -4px;
+}
+
+.visit-page h1 em {
+    display: inline-block;
+    margin-left: 8vw;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -3px;
+    color: var(--accent);
+}
+
+.visit-page .visit-intro {
+    max-width: 280px;
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: .5px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   INFO BLOCKS
+========================= */
+
+.visit-page .visit-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--line);
+}
+
+.visit-page .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 45px 35px 55px 0;
+}
+
+.visit-page .info-block + .info-block {
+    padding-left: 35px;
+    border-left: 1px solid var(--line);
+}
+
+.visit-page .info-number {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--accent);
+}
+
+.visit-page .info-block h2 {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.visit-page .info-block p {
+    font-size: 12px;
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+.visit-page .text-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text);
+    transition: color .3s ease, border-color .3s ease;
+}
+
+.visit-page .text-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+
+/* =========================
+   TICKETS
+========================= */
+
+.visit-page .ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.visit-page .ticket strong {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.visit-page .ticket-button,
+.visit-page .send-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 17px 23px;
+    border: 1px solid rgba(231, 234, 223, .6);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 9px;
+    letter-spacing: 2px;
+    cursor: none;
+    transition: background .4s ease, color .4s ease, transform .4s ease;
+}
+
+.visit-page .ticket-button {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+.visit-page .ticket-button:hover,
+.visit-page .send-button:hover {
+    background: var(--text);
+    color: var(--bg);
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.visit-page .questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.visit-page .questions-title p {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+.visit-page .questions-title h2 {
+    font-size: clamp(48px, 7vw, 110px);
+    line-height: .9;
+    font-weight: 300;
+    letter-spacing: -3px;
+}
+
+.visit-page .questions-title h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+}
+
+.visit-page .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 520px;
+    width: 100%;
+    justify-self: end;
+}
+
+.visit-page .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visit-page .field label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--muted);
+}
+
+.visit-page .field input,
+.visit-page .field textarea {
+    width: 100%;
+    padding: 10px 0 14px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    cursor: none;
+    transition: border-color .3s ease;
+}
+
+.visit-page .field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.visit-page .field input::placeholder,
+.visit-page .field textarea::placeholder {
+    color: rgba(231, 234, 223, .35);
+}
+
+.visit-page .field input:focus,
+.visit-page .field textarea:focus {
+    border-color: var(--accent);
+}
+
+.visit-page .send-button {
+    align-self: flex-start;
+}
+
+.visit-page a:focus-visible,
+.visit-page button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.visit-page .visit-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 30px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .visit-page .visit-info {
+        grid-template-columns: 1fr;
+    }
+
+    .visit-page .info-block,
+    .visit-page .info-block + .info-block {
+        padding: 35px 0;
+        border-left: 0;
+    }
+
+    .visit-page .info-block + .info-block {
+        border-top: 1px solid var(--line);
+    }
+
+    .visit-page .questions {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .visit-page .contact-form {
+        justify-self: start;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .visit-page {
+        padding: 110px 20px 25px;
+    }
+
+    .visit-page .visit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 45px;
+    }
+
+    .visit-page h1 {
+        font-size: 22vw;
+        letter-spacing: -2px;
+    }
+
+    .visit-page h1 em {
+        margin-left: 6vw;
+        letter-spacing: -2px;
+    }
+
+    .visit-page .questions {
+        padding: 55px 0;
+    }
+
+    .visit-page .ticket-button,
+    .visit-page .send-button,
+    .visit-page .field input,
+    .visit-page .field textarea {
+        cursor: auto;
+    }
+
+    .visit-page .visit-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* =====================================================
+   FORM STATUS + TICKET MODAL (created by visit.js)
+===================================================== */
+
+.visit-page .form-status {
+    min-height: 1.4em;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #ffb4a2;
+}
+
+.visit-page .form-status.ok {
+    color: var(--accent);
+}
+
+.ticket-modal {
+    --bg: #14282a;
+    --text: #e7eadf;
+    --muted: rgba(231, 234, 223, .6);
+    --line: rgba(231, 234, 223, .2);
+    --accent: #ffe282;
+
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(5, 15, 15, .6);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity .4s ease;
+    font-family: "Inter", sans-serif;
+}
+
+.ticket-modal[hidden] { display: none; }
+.ticket-modal.open { opacity: 1; }
+
+.ticket-modal-panel {
+    position: relative;
+    width: 480px;
+    max-width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 45px 35px;
+    background: #e7eadf;
+    color: #111;
+    transform: translateX(100%);
+    transition: transform .8s cubic-bezier(.77, 0, .18, 1);
+}
+
+.ticket-modal.open .ticket-modal-panel { transform: translateX(0); }
+
+.ticket-modal h2 {
+    font-size: 44px;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+.ticket-modal h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ticket-modal .modal-eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.ticket-modal .modal-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: transparent;
+    font-size: 14px;
+    cursor: none;
+}
+
+.ticket-modal .modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.ticket-modal .modal-field label {
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.ticket-modal .modal-field input,
+.ticket-modal .modal-field select {
+    padding: 8px 0 12px;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 300;
+    color: #111;
+    cursor: none;
+}
+
+.ticket-modal .modal-tickets { margin-top: 30px; }
+
+.ticket-modal .modal-ticket {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.ticket-modal .modal-ticket span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.ticket-modal .modal-ticket small {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    color: rgba(0, 0, 0, .55);
+}
+
+.ticket-modal .modal-ticket strong {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.ticket-modal .stepper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ticket-modal .stepper button {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .35);
+    background: transparent;
+    font-size: 16px;
+    cursor: none;
+    transition: background .3s ease, color .3s ease;
+}
+
+.ticket-modal .stepper button:hover {
+    background: #111;
+    color: #e7eadf;
+}
+
+.ticket-modal .stepper output {
+    min-width: 18px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.ticket-modal .modal-error {
+    min-height: 1.4em;
+    margin-top: 18px;
+    font-size: 12px;
+    color: #a3281a;
+}
+
+.ticket-modal .modal-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 10px 0 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.ticket-modal .modal-total strong {
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.ticket-modal .modal-summary {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ticket-modal .send-button {
+    display: inline-flex;
+    gap: 35px;
+    padding: 17px 23px;
+    border: 1px solid #111;
+    border-radius: 100px;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 9px;
+    letter-spacing: 2px;
+    cursor: none;
+    transition: background .4s ease, color .4s ease;
+}
+
+.ticket-modal .send-button:hover {
+    background: #111;
+    color: #e7eadf;
+}
+
+.ticket-modal :focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .ticket-modal-panel { width: 100%; padding: 35px 20px; }
+    .ticket-modal h2 { font-size: 36px; }
+    .ticket-modal .modal-close,
+    .ticket-modal .stepper button,
+    .ticket-modal .send-button,
+    .ticket-modal .modal-field input,
+    .ticket-modal .modal-field select { cursor: auto; }
+}
