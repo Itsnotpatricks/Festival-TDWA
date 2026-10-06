@@ -1,67 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MONET — Immersive Experience</title>
+    <title>WORKS — MONET Immersive Experience</title>
 
     <link rel="stylesheet" href="CSS/style.css">
+
+
+    <script src="CSS/JS/script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- CUSTOM CURSOR -->
-    <div class="cursor"></div>
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
 
-    <!-- MENU BUTTON -->
-    <button class="menu-button" id="menuButton">
-        <span></span>
-        <span></span>
-    </button>
+<!-- MENU BUTTON -->
+<button class="menu-button" id="menuButton" aria-label="Open menu">
+    <span></span>
+    <span></span>
+</button>
 
+<!-- MENU -->
+<nav class="menu" id="menu">
 
-    <!-- SLIDE MENU -->
-    <nav class="menu" id="menu">
+    <div class="menu-top">
+        <span>MONET</span>
+        <span>IMMERSIVE EXPERIENCE</span>
+    </div>
 
-        <div class="menu-top">
-            <span>MONET</span>
-            <span>IMMERSIVE EXPERIENCE</span>
-        </div>
+    <div class="menu-links">
+        <a href="index.html"><span>HOME</span><small>01</small></a>
+        <a href="experience.html"><span>EXPERIENCE</span><small>02</small></a>
+        <a href="monet.html"><span>MONET</span><small>03</small></a>
+        <a href="works.html"><span>WORKS</span><small>04</small></a>
+        <a href="visit.html"><span>VISIT</span><small>05</small></a>
+    </div>
 
-        <div class="menu-links">
+</nav>
 
-            <a href="index.html">
-                <span>HOME</span>
-                <small>01</small>
-            </a>
-
-            <a href="experience.html">
-                <span>EXPERIENCE</span>
-                <small>02</small>
-            </a>
-
-            <a href="monet.html">
-                <span>MONET</span>
-                <small>03</small>
-            </a>
-
-            <a href="works.html">
-                <span>WORKS</span>
-                <small>04</small>
-            </a>
-
-            <a href="visit.html">
-                <span>VISIT</span>
-                <small>05</small>
-            </a>
-
-        </div>
+<!-- SCROLL PROGRESS -->
+<div class="progress"></div>
 
 
+<main class="works-page">
 
+    <!-- HEADER -->
+    <header class="works-header">
+        <p class="page-number">04 — WORKS</p>
+        <h1>Four rooms,<br><em>thirty minutes each.</em></h1>
+        <p class="works-intro">
+            Water Lilies, The Haystacks, Regattas Argenteuil and Beach in Trouville.
+            Seven paintings from each room of the experience. Click any painting to see it large.
+        </p>
+    </header>
+
+    <!-- ROOM NAV -->
+    <nav class="room-nav" aria-label="Rooms">
+        <a href="#room1">01 WATER LILIES</a>
+        <a href="#room2">02 THE HAYSTACKS</a>
+        <a href="#room3">03 REGATTAS ARGENTEUIL</a>
+        <a href="#room4">04 BEACH IN TROUVILLE</a>
     </nav>
 
+        <!-- ROOM 01 -->
+        <section class="room" id="room1">
+            <header class="room-head">
+                <p class="room-number">ROOM 01 / 04 · 30 MIN · 1899–1926</p>
+                <h2>Water <em>Lilies</em></h2>
+                <p class="room-desc">The floor becomes a pond. Lilies, willows and the Japanese footbridge from Monet's garden at Giverny.</p>
+            </header>
+            <div class="room-grid">
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/waterliliespond.webp" alt="Water Lily Pond" loading="lazy">
+                    <figcaption><b>Water Lily Pond</b><span>1899</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/waterlilies.webp" alt="Water Lilies" loading="lazy">
+                    <figcaption><b>Water Lilies</b><span>1906</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/waterliliesclouds.webp" alt="Water Lilies: Clouds" loading="lazy">
+                    <figcaption><b>Water Lilies: Clouds</b><span>1914–1926</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/waterlilies green.webp"Water Lilies: Green Reflections" loading="lazy">
+                    <figcaption><b>Water Lilies: Green Reflections</b><span>1914–1926</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/apaganthus.webp" alt="Agapanthus" loading="lazy">
+                    <figcaption><b>Agapanthus</b><span>1914–1926</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/weepingw.webp"Weeping Willow loading="lazy">
+                    <figcaption><b>Weeping Willow</b><span>1918–1919</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room1/japanessebridge.webp" alt="The Japanese Footbridge" loading="lazy">
+                    <figcaption><b>The Japanese Footbridge</b><span>1918–1924</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ROOM 02 -->
+        <section class="room" id="room2">
+            <header class="room-head">
+                <p class="room-number">ROOM 02 / 04 · 30 MIN · 1890–1891</p>
+                <h2>The <em>Haystacks</em></h2>
+                <p class="room-desc">One field, every season. The same stacks in morning light, frost, snow, mist and gold.</p>
+            </header>
+            <div class="room-grid">
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/grainstacks-at-the-end-of-summ.webp" alt="Grainstacks at the End of Summer, Morning Effect" loading="lazy">
+                    <figcaption><b>Grainstacks at the End of Summer, Morning Effect</b><span>1890–1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/wheatstack end of summer.webp" alt="Wheatstacks (End of Summer)" loading="lazy">
+                    <figcaption><b>Wheatstacks (End of Summer)</b><span>1890–1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/autum.webp" alt="Stacks of Wheat (End of Day, Autumn)" loading="lazy">
+                    <figcaption><b>Stacks of Wheat (End of Day, Autumn)</b><span>1890–1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/grainstack-sunset.jpeg" alt="Grainstack (Sunset)" loading="lazy">
+                    <figcaption><b>Grainstack (Sunset)</b><span>1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/wheatstacks-snow-effect-morning.webp" alt="Wheatstacks (Snow Effect, Morning)" loading="lazy">
+                    <figcaption><b>Wheatstacks (Snow Effect, Morning)</b><span>1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/haystack-at-sunset-frosty-weather.webp" alt="Haystack at Sunset, Frosty Weather" loading="lazy">
+                    <figcaption><b>Haystack at Sunset, Frosty Weather</b><span>1891</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room2/grainstack-sun-in-the-mist.webp" alt="Grainstack, Sun in the Mist" loading="lazy">
+                    <figcaption><b>Grainstack, Sun in the Mist</b><span>1891</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ROOM 03 -->
+        <section class="room" id="room3">
+            <header class="room-head">
+                <p class="room-number">ROOM 03 / 04 · 30 MIN · 1872–1875</p>
+                <h2>Regattas <em>Argenteuil</em></h2>
+                <p class="room-desc">The river comes alive. Sails, bridges and promenades along the Seine at Argenteuil.</p>
+            </header>
+            <div class="room-grid">
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/regatta arg.webp" alt="Regatta at Argenteuil" loading="lazy">
+                    <figcaption><b>Regatta at Argenteuil</b><span>1872</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/basin argenteuil.webp"The Basin at Argenteuil loading="lazy">
+                    <figcaption><b>The Basin at Argenteuil</b><span>1872</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/promenade-near-argenteuil.webp" alt="The Promenade at Argenteuil" loading="lazy">
+                    <figcaption><b>The Promenade at Argenteuil</b><span>1872</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/poppies.webp"Poppy Field loading="lazy">
+                    <figcaption><b>Poppy Field</b><span>1873</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/bridge aregnt.webp" alt="The Bridge at Argenteuil" loading="lazy">
+                    <figcaption><b>The Bridge at Argenteuil</b><span>1874</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/sailboats.webp" alt="Sailboats at Argenteuil" loading="lazy">
+                    <figcaption><b>Sailboats at Argenteuil</b><span>1874</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room3/womanparasol.webp" alt="Woman with a Parasol" loading="lazy">
+                    <figcaption><b>Woman with a Parasol</b><span>1875</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ROOM 04 -->
+        <section class="room" id="room4">
+            <header class="room-head">
+                <p class="room-number">ROOM 04 / 04 · 30 MIN · 1870–1882</p>
+                <h2>Beach, <em>in Trouville</em></h2>
+                <p class="room-desc">The shore comes alive. Wind, sea air and pale summer colours at Trouville and Pourville.</p>
+            </header>
+            <div class="room-grid">
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/Claude_Monet_-_The_Beach_at_Trouville_La_Plage_a_Trouville.webp" alt="The Beach at Trouville" loading="lazy">
+                    <figcaption><b>The Beach at Trouville</b><span>1870</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/the-beach-at-trouville.webp" alt="On the Beach at Trouville" loading="lazy">
+                    <figcaption><b>On the Beach at Trouville</b><span>1870</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/camille-trouville.webp"Camille on the Beach at Trouville" loading="lazy">
+                    <figcaption><b>Camille on the Beach at Trouville</b><span>1870</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/hotel.webp" alt="The Hôtel des Roches Noires at Trouville" loading="lazy">
+                    <figcaption><b>The Hôtel des Roches Noires at Trouville</b><span>1870</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/cliff-walk-at-pourville.webp" alt="Cliff Walk at Pourville" loading="lazy">
+                    <figcaption><b>Cliff Walk at Pourville</b><span>1882</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/thumb-beach-pourville.webp" alt="The Beach at Pourville" loading="lazy">
+                    <figcaption><b>The Beach at Pourville</b><span>1882</span></figcaption>
+                </figure>
+                <figure class="work" tabindex="0" role="button">
+                    <img src="room4/low-tide-at-pourville.webp" alt="Low Tide at Pourville" loading="lazy">
+                    <figcaption><b>Low Tide at Pourville</b><span>1882</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+    <!-- CTA -->
+    <section class="works-cta">
+        <h2>Now step <em>inside.</em></h2>
+        <a href="experience.html" class="enter">
+            <span>ENTER THE EXPERIENCE</span>
+            <strong>↗</strong>
+        </a>
+    </section>
+
+    <footer class="works-footer">
+        <span>MONET — IMMERSIVE EXPERIENCE</span>
+        <span>PARIS</span>
+    </footer>
+
+</main>
 
 
-     <script src="CSS/JS/script.js"></script>
+</body>
+</html>

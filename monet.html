@@ -1,66 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MONET — Immersive Experience</title>
+    <title>MONET — MONET Immersive Experience</title>
 
     <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 
 <body>
 
-    <!-- CUSTOM CURSOR -->
-    <div class="cursor"></div>
+<audio id="bg-music" loop>
+    <source src="MONET MUSIC.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- MENU BUTTON -->
-    <button class="menu-button" id="menuButton">
-        <span></span>
-        <span></span>
-    </button>
+<button id="music-toggle" class="music-button">
+    MUSIC ON
+</button>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<!-- MENU BUTTON -->
+<button class="menu-button" id="menuButton" aria-label="Open menu">
+    <span></span>
+    <span></span>
+</button>
+
+<!-- MENU -->
+<nav class="menu" id="menu">
+
+    <div class="menu-top">
+        <span>MONET</span>
+        <span>IMMERSIVE EXPERIENCE</span>
+    </div>
+
+    <div class="menu-links">
+        <a href="index.html"><span>HOME</span><small>01</small></a>
+        <a href="experience.html"><span>EXPERIENCE</span><small>02</small></a>
+        <a href="monet.html"><span>MONET</span><small>03</small></a>
+        <a href="works.html"><span>WORKS</span><small>04</small></a>
+        <a href="visit.html"><span>VISIT</span><small>05</small></a>
+    </div>
+
+</nav>
+
+<!-- SCROLL PROGRESS -->
+<div class="progress"></div>
 
 
-    <!-- SLIDE MENU -->
-    <nav class="menu" id="menu">
+<main class="life-page">
 
-        <div class="menu-top">
-            <span>MONET</span>
-            <span>IMMERSIVE EXPERIENCE</span>
+    <!-- HEADER -->
+    <header class="life-header">
+
+        <p class="page-number">03 — MONET · 1840–1926</p>
+
+        <h1>Claude <em>Monet</em></h1>
+
+        <p class="life-intro">
+            A grocer's son from Le Havre who painted the same light for sixty years,
+            lost almost everything twice, and ended up building his own garden to paint.
+        </p>
+
+    </header>
+
+
+    <!-- TIMELINE -->
+    <div class="life-body">
+
+        <aside class="life-year" aria-hidden="true">
+            <div class="life-year-sticky">
+                <strong id="yearNow">1840</strong>
+                <span id="placeNow">Paris</span>
+            </div>
+        </aside>
+
+        <ol class="life-list">
+
+            <li class="life-item" data-year="1840" data-place="Paris">
+                <h2>Born in <em>Paris</em></h2>
+                <p class="life-date">14 NOVEMBER 1840</p>
+                <p>Oscar-Claude Monet is born in Paris. At about five he moves with his family to Le Havre, on the Normandy coast, where the sky and the sea first become his subject.</p>
+            </li>
+
+            <li class="life-item" data-year="1858" data-place="Le Havre">
+                <h2>Learning to <em>paint outdoors</em></h2>
+                <p class="life-date">1858</p>
+                <p>He sells caricatures around town until the painter Eugène Boudin takes him to the shore and teaches him to work from nature, not from the studio.</p>
+            </li>
+
+            <li class="life-item" data-year="1862" data-place="Paris">
+                <h2>Paris and <em>new friends</em></h2>
+                <p class="life-date">1859–1865</p>
+                <p>He studies in Paris and, after a spell in military service, meets Renoir, Sisley and Bazille. Together they begin painting modern life in fast, bright strokes.</p>
+            </li>
+
+            <li class="life-item" data-year="1874" data-place="Paris">
+                <h2>The name <em>Impressionism</em></h2>
+                <p class="life-date">1874</p>
+                <p>His harbour scene Impression, Sunrise hangs in the first group exhibition. A critic mocks the title, and the movement takes its name from the insult.</p>
+            </li>
+
+            <li class="life-item" data-year="1879" data-place="Vétheuil">
+                <h2>Loss and <em>the Seine</em></h2>
+                <p class="life-date">1879</p>
+                <p>His first wife, Camille, dies at 32. Money is tight, but he keeps painting the river and its winter ice at Vétheuil.</p>
+            </li>
+
+            <li class="life-item" data-year="1883" data-place="Giverny">
+                <h2>A house at <em>Giverny</em></h2>
+                <p class="life-date">1883</p>
+                <p>He rents a pink house with a long garden in a village west of Paris. He stays for the rest of his life.</p>
+            </li>
+
+            <li class="life-item" data-year="1891" data-place="Giverny">
+                <h2>One subject, <em>many hours</em></h2>
+                <p class="life-date">1890–1894</p>
+                <p>The Haystacks, then Rouen Cathedral. He works on many canvases at once, switching as the light shifts, to paint the weather and not the object.</p>
+            </li>
+
+            <li class="life-item" data-year="1899" data-place="Giverny">
+                <h2>The water <em>garden</em></h2>
+                <p class="life-date">1893–1899</p>
+                <p>He buys the land across the road, diverts a stream and builds a lily pond with a Japanese footbridge. It becomes his main subject for the next 25 years.</p>
+            </li>
+
+            <li class="life-item" data-year="1914" data-place="Giverny">
+                <h2>Grief, then <em>the great panels</em></h2>
+                <p class="life-date">1911–1918</p>
+                <p>His second wife, Alice, dies in 1911 and his son Jean in 1914. He answers with huge Water Lilies canvases, and after the 1918 armistice offers them to France.</p>
+            </li>
+
+            <li class="life-item" data-year="1923" data-place="Giverny">
+                <h2>Failing <em>sight</em></h2>
+                <p class="life-date">1912–1923</p>
+                <p>Cataracts blur and yellow his vision. He keeps painting, then has surgery in 1923, and the cooler blues return to his palette.</p>
+            </li>
+
+            <li class="life-item" data-year="1926" data-place="Giverny">
+                <h2>The last <em>winter</em></h2>
+                <p class="life-date">5 DECEMBER 1926</p>
+                <p>Monet dies at Giverny, aged 86. The Water Lilies open to the public the next year at the Musée de l'Orangerie in Paris.</p>
+            </li>
+
+        </ol>
+
+    </div>
+
+
+    <!-- GALLERY -->
+    <section class="gallery">
+
+        <div class="gallery-head">
+            <p class="page-number">THE MAN AND HIS WORK</p>
+            <h2>Faces &amp; <em>paintings</em></h2>
         </div>
 
-        <div class="menu-links">
+        <div class="gallery-grid">
 
-            <a href="index.html">
-                <span>HOME</span>
-                <small>01</small>
-            </a>
+            <!-- PORTRAITS OF MONET: replace src and caption with your own -->
+            <figure class="shot shot-tall">
+                <img src="Images monet/young monet.webp" alt="Portrait of Claude Monet as a young man" loading="lazy">
+                <figcaption><b>Monet, young</b><span>PORTRAIT</span></figcaption>
+            </figure>
 
-            <a href="experience.html">
-                <span>EXPERIENCE</span>
-                <small>02</small>
-            </a>
+            <figure class="shot shot-tall">
+                <img src="Images monet/monetgiv.webp" alt="Claude Monet at Giverny" loading="lazy">
+                <figcaption><b>Monet at Giverny</b><span>PORTRAIT</span></figcaption>
+            </figure>
 
-            <a href="monet.html">
-                <span>MONET</span>
-                <small>03</small>
-            </a>
+            <!-- PAINTINGS -->
+            <figure class="shot shot-wide">
+                <img src="Images monet/sunr.webp" alt="Impression, Sunrise" loading="lazy">
+                <figcaption><b>Impression, Sunrise</b><span>1872</span></figcaption>
+            </figure>
 
-            <a href="works.html">
-                <span>WORKS</span>
-                <small>04</small>
-            </a>
+            <figure class="shot">
+                <img src="Images monet/wp.webp" alt="Woman with a Parasol" loading="lazy">
+                <figcaption><b>Woman with a Parasol</b><span>1875</span></figcaption>
+            </figure>
 
-            <a href="visit.html">
-                <span>VISIT</span>
-                <small>05</small>
-            </a>
+            <figure class="shot">
+                <img src="Images monet/poppies.webp" alt="Poppy Field" loading="lazy">
+                <figcaption><b>Poppy Field</b><span>1873</span></figcaption>
+            </figure>
+
+            <figure class="shot shot-wide">
+                <img src="Images monet/sails.webp" alt="Cliffs and Sailboats at Pourville" loading="lazy">
+                <figcaption><b>Cliffs and Sailboats at Pourville</b><span>1882–1894</span></figcaption>
+            </figure>
+
+            <figure class="shot shot-wide">
+                <img src="Images monet/waterlilies.webp" alt="Water Lilies" loading="lazy">
+                <figcaption><b>Water Lilies</b><span>1914–1926</span></figcaption>
+            </figure>
 
         </div>
 
+    </section>
 
 
-    </nav>
+    <!-- CTA -->
+    <section class="life-cta">
+
+        <h2>See the light <em>he chased.</em></h2>
+
+        <a href="works.html" class="enter">
+            <span>SEE MORE OF HIS ARTWORKS</span>
+            <strong>↗</strong>
+        </a>
+
+    </section>
 
 
-     <script src="CSS/JS/script.js"></script>
+    <!-- FOOTER -->
+    <footer class="life-footer">
+        <span>MONET — IMMERSIVE EXPERIENCE</span>
+        <span>PARIS</span>
+    </footer>
+
+</main>
+
+<script src="CSS/JS/script.js"></script>
+
+
+</body>
+</html>

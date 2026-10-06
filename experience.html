@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MONET — Immersive Experience</title>
+    <title>EXPERIENCE — MONET Immersive Experience</title>
 
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/theme.css">
+    <link rel="stylesheet" href="CSS/experience.css">
+
+    <script src="CSS/JS/theme.js"></script>
 </head>
 
 <body>
+<audio id="bg-music" loop>
+    <source src="MONET MUSIC.mp3" type="audio/mpeg">
+</audio>
 
+<button id="music-toggle" class="music-button">
+    MUSIC ON
+</button>
     <!-- CUSTOM CURSOR -->
     <div class="cursor"></div>
 
     <!-- MENU BUTTON -->
-    <button class="menu-button" id="menuButton">
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
         <span></span>
         <span></span>
     </button>
 
-
-    <!-- SLIDE MENU -->
+    <!-- MENU -->
     <nav class="menu" id="menu">
 
         <div class="menu-top">
@@ -30,7 +40,6 @@
         </div>
 
         <div class="menu-links">
-
             <a href="index.html">
                 <span>HOME</span>
                 <small>01</small>
@@ -55,10 +64,321 @@
                 <span>VISIT</span>
                 <small>05</small>
             </a>
+        </div>
+
+    </nav>
+
+
+    <main class="experience-page">
+
+        <!-- SCROLL PROGRESS -->
+        <div class="progress"></div>
+
+        <!-- ROOM COUNTER -->
+        <div class="room-counter">
+            ROOM <b>01</b> / 04
+        </div>
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="exp-header">
+
+            <div>
+
+                <p class="page-number">
+                    02 — EXPERIENCE
+                </p>
+
+                <h1>
+
+                    <span class="line">
+                        <span>Step into</span>
+                    </span>
+
+                    <span class="line">
+                        <span>
+                            <em>the light.</em>
+                        </span>
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <p class="exp-intro">
+
+                FIFTY MINUTES INSIDE THE PAINTINGS.
+                FOUR ROOMS, ONE CONTINUOUS JOURNEY
+                FROM DAWN TO DUSK, PROJECTED FLOOR TO CEILING.
+
+            </p>
+
+        </header>
+
+
+        <!-- =====================================================
+             FACTS
+        ====================================================== -->
+
+        <section class="exp-facts">
+
+            <div>
+                <strong>
+                    <span data-count="120">0</span>
+                    <small> MIN</small>
+                </strong>
+
+                <span>FULL JOURNEY</span>
+            </div>
+
+
+            <div>
+                <strong>
+                    <span data-count="360">0</span>°
+                </strong>
+
+                <span>PROJECTION</span>
+            </div>
+
+
+            <div>
+                <strong>
+                    <span data-count="4">0</span>
+                </strong>
+
+                <span>ROOMS</span>
+            </div>
+
+
+            <div>
+                <strong>LIVE</strong>
+
+                <span>ORIGINAL SCORE</span>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MARQUEE
+        ====================================================== -->
+
+        <div class="marquee" aria-hidden="true">
+
+            <div class="track">
+
+                <span>
+                    WATER LILIES ✦
+                    THE HAYSTACKS ✦
+                    REGATTAS ARGENTEUIL ✦
+                    BEACH TROUVILLE ✦
+                </span>
+
+                <span>
+                   WATER LILIES ✦
+                    THE HAYSTACKS ✦
+                    REGATTAS ARGENTEUIL ✦
+                    BEACH TROUVILLE ✦
+                </span>
+
+            </div>
 
         </div>
 
 
+        <!-- =====================================================
+             CHAPTERS
+        ====================================================== -->
 
-    </nav>
+        <section class="chapters">
+
+
+            <!-- ROOM 01 -->
+            <article class="chapter reveal">
+
+                <div class="chapter-art art-1">
+                            <img src="IMAGES EXPERIENCE/LILIES.WEBP" alt="Lilies ">
+
+
+                    <div class="painting-label">
+                        ROOM 01
+                    </div>
+
+                </div>
+
+
+                <div class="chapter-text">
+
+                    <p class="chapter-number">
+                        ROOM 01 · 30 MIN
+                    </p>
+
+                    <h2>
+                        Water <em>Lilies</em>
+                    </h2>
+
+                    <p>
+                        THE FLOOR BECOMES A POND.
+                        LILIES DRIFT PAST YOUR FEET AS
+                        THE SKY RIPPLES ACROSS THE WATER.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ROOM 02 -->
+            <article class="chapter reveal">
+
+                <div class="chapter-art art-2">
+                    <img src="IMAGES EXPERIENCE/haystacks.webp" alt="The Haystack´s">
+
+                    <div class="painting-label">
+                        ROOM 02
+                    </div>
+
+                </div>
+
+
+                <div class="chapter-text">
+
+                    <p class="chapter-number">
+                        ROOM 02 · 30 MIN
+                    </p>
+
+                    <h2>
+                        The <em>Haystacks</em>
+                    </h2>
+
+                    <p>
+                        ONE FIELD, EVERY SEASON.
+                        WATCH A SINGLE MORNING TURN FROM
+                        FROST TO GOLD IN MINUTES.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ROOM 03 -->
+            <article class="chapter reveal">
+
+                <div class="chapter-art art-3">
+                    <img src="IMAGES EXPERIENCE/ragatta.webp" alt="Regatta´s Argenteuil">
+
+                    <div class="painting-label">
+                        ROOM 03
+                    </div>
+
+                </div>
+
+
+                <div class="chapter-text">
+
+                    <p class="chapter-number">
+                        ROOM 03 · 30 MIN
+                    </p>
+
+                    <h2>
+                        Regattas <em>Argenteuil</em>
+                    </h2>
+
+                    <p>
+                        THE RIVER COMES ALIVE.
+SAILS GLIDE ACROSS THE WATER AS LIGHT SHIFTS FROM COOL MORNING BLUE TO WARM, REFLECTIVE GOLD AROUND YOU.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ROOM 04 -->
+            <article class="chapter reveal">
+
+                <div class="chapter-art art-4">
+
+                    <img src="IMAGES EXPERIENCE/beach.webp" alt="Beach in Trouville">
+
+                    <div class="painting-label">
+                        ROOM 04
+                    </div>
+
+                </div>
+
+
+                <div class="chapter-text">
+
+                    <p class="chapter-number">
+                        ROOM 04 · 30 MIN
+                    </p>
+
+                    <h2>
+                        Beach, <em> in Trouville</em>
+                    </h2>
+
+                    <p>
+                   THE SHORE COMES ALIVE.
+                   WIND MOVES THROUGH THE BEACH AS SOFT LIGHT, 
+                   SEA AIR, AND PALE SUMMER COLORS SURROUND YOU.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="exp-cta reveal">
+
+            <h2>
+                Ready to <em>enter?</em>
+            </h2>
+
+            <a href="visit.html" class="enter">
+
+                <span>
+                    BOOK YOUR VISIT
+                </span>
+
+                <strong>
+                    ↗
+                </strong>
+
+            </a>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="exp-footer">
+
+            <span>
+                MONET — IMMERSIVE EXPERIENCE
+            </span>
+
+            <span>
+                PARIS
+            </span>
+
+        </footer>
+
+    </main>
+
+
     <script src="CSS/JS/script.js"></script>
+
+</body>
+</html>
