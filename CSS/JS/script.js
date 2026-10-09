@@ -1,12 +1,4 @@
-/* Monet site: one script for every page.
-   Each section looks for its own page and quietly exits if it isn't there,
-   so it's safe to load this file everywhere:
 
-   <script src="CSS/JS/script.js" defer></script>
-*/
-
-
-/* ---------- Theme (light / dark) ---------- */
 
 (function () {
     const KEY = "monet-theme";
@@ -74,7 +66,6 @@ function initScrollProgress() {
 }
 
 
-/* ---------- Menu ---------- */
 
 const menuButton = document.getElementById("menuButton");
 const menu = document.getElementById("menu");
@@ -100,7 +91,6 @@ if (menuButton && menu) {
 }
 
 
-/* ---------- Cursor + home page light ---------- */
 
 (function () {
     const cursor = document.querySelector(".cursor");
@@ -123,7 +113,6 @@ if (menuButton && menu) {
         }
     });
 
-    // Grow the cursor over anything clickable (works for elements added later too)
     if (!cursor) return;
 
     const clickable = "a, button, input, textarea, select, .work, .shot";
@@ -144,7 +133,6 @@ if (menuButton && menu) {
 })();
 
 
-/* ---------- Visit page: tickets + contact form ---------- */
 
 (function () {
     const TICKETS = [
@@ -156,7 +144,6 @@ if (menuButton && menu) {
     const MAX_PER_TYPE = 10;
     const euro = n => `€${n}`;
 
-    // "Open in maps" link
     const mapsLink = document.querySelector(".info-block .text-link");
     if (mapsLink) {
         const address = "Monet Immersive Experience, 12 Rue de l'Art, 75004 Paris, France";
@@ -165,7 +152,6 @@ if (menuButton && menu) {
         mapsLink.rel = "noopener";
     }
 
-    // Ticket modal
     const buyButton = document.querySelector(".ticket-button");
     if (!buyButton) return;
 
@@ -332,7 +318,6 @@ if (menuButton && menu) {
 
     render();
 
-    // Contact form
     const form = document.querySelector(".contact-form");
     if (!form) return;
 
@@ -359,7 +344,6 @@ if (menuButton && menu) {
             return;
         }
 
-        // TODO: send to a backend or form service
         console.log("Question:", { name, email, message });
 
         form.reset();
@@ -369,7 +353,6 @@ if (menuButton && menu) {
 })();
 
 
-/* ---------- Experience page: scroll motion ---------- */
 
 (function () {
     const page = document.querySelector(".experience-page");
@@ -378,7 +361,6 @@ if (menuButton && menu) {
     const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const lerp = (a, b, t) => a + (b - a) * t;
 
-    // Number count-up
     const counters = page.querySelectorAll("[data-count]");
 
     function countUp(el) {
@@ -395,7 +377,6 @@ if (menuButton && menu) {
         })(start);
     }
 
-    // Fade in chapters and .reveal blocks as they scroll into view
     const chapters = [...page.querySelectorAll(".chapter")];
     const reveals  = [...page.querySelectorAll(".reveal")];
     const fadeIns  = chapters.concat(reveals);
@@ -421,13 +402,11 @@ if (menuButton && menu) {
         fadeIns.forEach(el => el.classList.add("in"));
     }
 
-    // Everything below is motion, so skip it if the visitor asked for less
     if (reduceMotion) {
         fadeIns.forEach(el => el.classList.add("in"));
         return;
     }
 
-    // Room counter + tilt on the artwork
     const counter = page.querySelector(".room-counter");
     const counterNum = counter && counter.querySelector("b");
 
@@ -454,12 +433,10 @@ if (menuButton && menu) {
         return s;
     });
 
-    // Marquee
     const track = page.querySelector(".marquee .track");
     let marqueeX = 0;
     let trackWidth = track ? track.scrollWidth / 2 : 0;
 
-    // One animation loop for progress bar, parallax, counter and marquee
     const bar = document.querySelector(".progress");
     let lastY = window.scrollY;
     let velocity = 0;
@@ -518,7 +495,6 @@ if (menuButton && menu) {
 })();
 
 
-/* ---------- Monet page: gallery + timeline ---------- */
 
 (function () {
     const page = document.querySelector(".life-page");
@@ -526,7 +502,6 @@ if (menuButton && menu) {
 
     initScrollProgress();
 
-    // Gallery: fade in, handle missing images
     const shots = [...page.querySelectorAll(".shot")];
 
     if ("IntersectionObserver" in window) {
@@ -555,7 +530,6 @@ if (menuButton && menu) {
         if (img.complete && img.naturalWidth === 0) shot.classList.add("missing");
     });
 
-    // Gallery: lightbox
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox";
     lightbox.hidden = true;
@@ -607,7 +581,6 @@ if (menuButton && menu) {
         if (e.key === "Escape" && !lightbox.hidden) closeShot();
     });
 
-    // Timeline: update the year and place as you scroll
     const items   = [...page.querySelectorAll(".life-item")];
     const yearEl  = document.getElementById("yearNow");
     const placeEl = document.getElementById("placeNow");
@@ -649,7 +622,6 @@ if (menuButton && menu) {
 })();
 
 
-/* ---------- Works page: rooms + lightbox ---------- */
 
 (function () {
     const page = document.querySelector(".works-page");
@@ -657,7 +629,6 @@ if (menuButton && menu) {
 
     initScrollProgress();
 
-    // Fade in works, handle missing images
     const works = [...page.querySelectorAll(".work")];
 
     if ("IntersectionObserver" in window) {
@@ -684,7 +655,6 @@ if (menuButton && menu) {
         if (img.complete && img.naturalWidth === 0) work.classList.add("missing");
     });
 
-    // Room nav: highlight the room currently on screen
     const rooms = [...page.querySelectorAll(".room")];
     const links = [...page.querySelectorAll(".room-nav a")];
 
@@ -701,7 +671,6 @@ if (menuButton && menu) {
         rooms.forEach(room => observer.observe(room));
     }
 
-    // Lightbox with prev / next inside the same room
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox";
     lightbox.hidden = true;

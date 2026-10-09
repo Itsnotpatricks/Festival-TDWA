@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* =====================================================
-   MONET — IMMERSIVE EXPERIENCE · style.css
-   One stylesheet for every page.
-
-    1. Tokens (dark / light)      8. Experience page
-    2. Reset & base               9. Visit page
-    3. Cursor                    10. Ticket modal
-    4. Buttons                   11. Monet (life) page + gallery
-    5. Menu & theme toggle       12. Works page
-    6. Home                      13. Lightbox (shared)
-    7. Shared page layout        14. Reduced motion
-===================================================== */
-
-
-/* =====================================================
-   1. TOKENS — change colors here, nowhere else
-===================================================== */
 
 :root,
 :root[data-theme="dark"] {
@@ -29,7 +12,7 @@
     --accent: #ffe282;
     --err:    #ffb4a2;
     --scrim:  rgba(5, 15, 15, .6);
-    --wash-a: rgba(20, 40, 40, .25);   /* home photo overlay */
+    --wash-a: rgba(20, 40, 40, .25);   
     --wash-b: rgba(10, 30, 30, .45);
     --spot:   rgba(255, 226, 130, .28);
 }
@@ -52,9 +35,7 @@
 :root { --ink-60: color-mix(in srgb, var(--ink) 60%, transparent); }
 
 
-/* =====================================================
-   2. RESET & BASE
-===================================================== */
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -68,7 +49,6 @@ body {
     transition: background-color .4s ease, color .4s ease;
 }
 
-/* only the home page is locked to one screen */
 body:has(.home) { overflow: hidden; }
 
 a { text-decoration: none; color: inherit; }
@@ -78,9 +58,7 @@ a:focus-visible,
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 
-/* =====================================================
-   3. CURSOR — custom cursor only on mouse devices
-===================================================== */
+
 
 .cursor {
     display: none;
@@ -102,9 +80,6 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 }
 
 
-/* =====================================================
-   4. BUTTONS — one pill style for all
-===================================================== */
 
 .enter,
 .ticket-button,
@@ -138,9 +113,7 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .send-button   { align-self: flex-start; }
 
 
-/* =====================================================
-   5. MENU & THEME TOGGLE
-===================================================== */
+
 
 .menu-button {
     position: fixed;
@@ -251,9 +224,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   6. HOME
-===================================================== */
 
 .home {
     position: relative;
@@ -368,10 +338,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   7. SHARED PAGE LAYOUT
-   Visit, experience, monet and works pages all start the same way.
-===================================================== */
+
 
 .visit-page,
 .experience-page,
@@ -410,7 +377,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     letter-spacing: -4px;
 }
 
-/* the italic, accent-colored word in every big heading */
 .visit-page h1 em,
 .experience-page h1 em,
 .experience-page h2 em,
@@ -453,7 +419,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     color: var(--muted);
 }
 
-/* scroll progress bar (moved by script.js) */
 .progress {
     position: fixed;
     top: 0;
@@ -489,11 +454,8 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   8. EXPERIENCE PAGE
-===================================================== */
 
-/* room counter (updated by script.js) */
+
 .room-counter {
     position: fixed;
     left: 40px;
@@ -510,7 +472,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 .room-counter.show { opacity: 1; transform: none; }
 .room-counter b { color: var(--accent); font-weight: 500; }
 
-/* title: masked line reveal */
 .experience-page h1 .line {
     display: block;
     overflow: hidden;
@@ -536,7 +497,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     to   { opacity: 1; transform: none; }
 }
 
-/* facts */
 .exp-facts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -573,7 +533,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 
 .exp-facts > div > span { font-size: 11px; letter-spacing: 4px; color: var(--muted); }
 
-/* marquee */
 .marquee {
     overflow: hidden;
     padding: 28px 0;
@@ -592,7 +551,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     -webkit-text-stroke: 1px var(--ink);
 }
 
-/* chapters (the four rooms) */
 .chapter {
     position: relative;
     display: grid;
@@ -608,7 +566,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 .chapter:nth-child(even) { grid-template-columns: 1fr 1.3fr; }
 .chapter:nth-child(even) .chapter-art { order: 2; }
 
-/* soft color wash behind each room */
 .chapter::before {
     content: "";
     position: absolute;
@@ -625,7 +582,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 
 .chapter.in::before { opacity: 1; }
 
-/* artwork */
 .chapter-art {
     position: relative;
     overflow: hidden;
@@ -655,7 +611,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     to   { background-position: 100% 70%; }
 }
 
-/* light that follows the mouse (--mx / --my are set by script.js) */
 .chapter-art::after {
     content: "";
     position: absolute;
@@ -688,32 +643,30 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 
 .chapter.in .painting-label { opacity: .8; transform: none; transition-delay: .6s; }
 
-/* the four gradient "paintings" */
-.art-1 { background-image:   /* water lilies */
+.art-1 { background-image:   
     radial-gradient(ellipse at 20% 35%, #f2b6c6 0 8%, transparent 9%),
     radial-gradient(ellipse at 60% 65%, #f6d5df 0 7%, transparent 8%),
     radial-gradient(ellipse at 78% 25%, #e6a2bd 0 6%, transparent 7%),
     radial-gradient(ellipse at 45% 20%, #9ed8cf 0 15%, transparent 30%),
     linear-gradient(135deg, #285d70 0%, #3d8f91 40%, #72b99d 70%, #b5d6ad 100%); }
 
-.art-2 { background-image:   /* haystacks */
+.art-2 { background-image:  
     radial-gradient(ellipse at 70% 70%, #e2ae45 0 14%, transparent 15%),
     radial-gradient(ellipse at 30% 80%, #c88c35 0 11%, transparent 12%),
     radial-gradient(ellipse at 55% 35%, rgba(255, 255, 255, .35) 0 15%, transparent 35%),
     linear-gradient(180deg, #91b8d1 0%, #c6d7d0 35%, #f0d9a8 58%, #c99543 100%); }
 
-.art-3 { background-image:   /* Rouen cathedral */
+.art-3 { background-image:   
     linear-gradient(90deg, rgba(90, 105, 150, .4) 0 3px, transparent 3px 38px),
     linear-gradient(90deg, rgba(255, 255, 255, .18) 0 8px, transparent 8px 42px),
     linear-gradient(135deg, #627eae 0%, #8995bd 30%, #c39caf 55%, #e7a67e 78%, #f4c18a 100%); }
 
-.art-4 { background-image:   /* Giverny at dusk */
+.art-4 { background-image:   
     radial-gradient(ellipse at 50% 100%, #3b315d 0 40%, transparent 41%),
     radial-gradient(ellipse at 25% 65%, #557d72 0 12%, transparent 25%),
     radial-gradient(ellipse at 75% 60%, #b06b86 0 12%, transparent 25%),
     linear-gradient(180deg, #292956 0%, #51406f 30%, #8e547e 55%, #d47b72 75%, #f6ae62 100%); }
 
-/* chapter text */
 .chapter-text > * {
     opacity: 0;
     transform: translateY(24px);
@@ -743,7 +696,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     color: var(--muted);
 }
 
-/* call to action */
 .exp-cta {
     display: flex;
     justify-content: space-between;
@@ -755,7 +707,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 
 .exp-cta h2 { font-size: clamp(48px, 7vw, 110px); line-height: .9; font-weight: 300; letter-spacing: -3px; }
 
-/* scroll reveal (the .in class is added by script.js) */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -786,9 +737,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   9. VISIT PAGE
-===================================================== */
 
 .visit-info {
     display: grid;
@@ -890,9 +838,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   10. TICKET MODAL (created by script.js)
-===================================================== */
+
 
 .ticket-modal {
     position: fixed;
@@ -1003,9 +949,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   11. MONET (LIFE) PAGE + GALLERY
-===================================================== */
+
 
 .life-header {
     padding-bottom: 70px;
@@ -1022,7 +966,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     color: var(--muted);
 }
 
-/* two columns: sticky year + timeline */
 .life-body {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1059,7 +1002,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 .life-year.swap strong,
 .life-year.swap span { opacity: 0; }
 
-/* timeline */
 .life-list {
     list-style: none;
     border-left: 1px solid var(--line);
@@ -1134,7 +1076,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     letter-spacing: -3px;
 }
 
-/* gallery (portraits + paintings) */
 .gallery { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
 .gallery-head { margin-bottom: 60px; }
@@ -1181,7 +1122,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 
 .shot:hover img { transform: scale(1.05); }
 
-/* a missing image leaves a quiet empty frame */
 .shot.missing img { display: none; }
 .shot.missing::before {
     content: "ADD IMAGE";
@@ -1257,9 +1197,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   12. WORKS PAGE
-===================================================== */
+
 
 .works-header { padding-bottom: 70px; border-bottom: 1px solid var(--line); }
 
@@ -1280,7 +1218,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     color: var(--muted);
 }
 
-/* room nav (sticks to the top edge) */
+
 .room-nav {
     position: sticky;
     top: 0;
@@ -1328,7 +1266,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     color: var(--muted);
 }
 
-/* 7 works per room: 2 + 3 + 2 */
+
 .room-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -1433,9 +1371,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   13. LIGHTBOX (monet gallery + works page, built by script.js)
-===================================================== */
+
 
 .lightbox {
     position: fixed;
@@ -1457,7 +1393,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 .lightbox img { max-width: 100%; max-height: 76vh; object-fit: contain; border-radius: 4px; }
 .lightbox figcaption { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; letter-spacing: 3px; color: var(--ink); }
 
-/* single close button (monet page) */
 .lightbox-close {
     position: absolute;
     top: 25px;
@@ -1470,7 +1405,6 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
     font-size: 14px;
 }
 
-/* close / prev / next buttons (works page) */
 .lb-btn {
     position: absolute;
     width: 48px;
@@ -1493,9 +1427,7 @@ body:has(.menu.active) .theme-toggle { opacity: 0; pointer-events: none; }
 }
 
 
-/* =====================================================
-   14. REDUCED MOTION
-===================================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
     .background,
